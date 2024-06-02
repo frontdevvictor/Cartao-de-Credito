@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 50% 50%, #192233 20%, #000);
+    display: --webkit-box;
+    display: --ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-alight: center;
+    -webkit-box-pack:center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-family: 'Raleway';
+    color: white;
+}
+
+.payment-title {
+    width: 100%;
+    text-align: center;
+}
+
