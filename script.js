@@ -24,7 +24,7 @@ var cardnumber_mask = new IMask(cardnumber,{
             mask: '0000 000000 000000',
             regex: '^(?:6011|65\\d[0,2]|64[4-9]\\d?)\\d{0,12}',
             cardtype: 'discover'
-        }
+        },
         {
             mask: '0000 000000 000000',
             regex: '^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}',
@@ -268,39 +268,10 @@ cardnumber.addEventListener('focus', function () {
 });
 
 expirationdate.addEventListener('focus', function () {
-    document.querySelector(.creditcard).classList.remove('flipped');
+    document.querySelector('.creditcard').classList.remove('flipped');
 });
 
 securitycode.addEventListener('focus', function () {
     document.querySelector('.creditcard').classList.add('flipped');
 });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
