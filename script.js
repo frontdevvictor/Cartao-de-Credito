@@ -35,6 +35,16 @@ var cardnumber_mask = new IMask(cardnumber,{
             regex: '^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}',
             cardtype: 'mastercard'
         },
+        // {
+        //     mask: '0000-0000-0000-0000',
+        //     regex: '^(5019|4175|4571)\\d{0,12}',
+        //     cardtype: 'dankort'
+        // },
+        // {
+        //     mask: '0000-0000-0000-0000',
+        //     regex: '^63[7-9]\\d{0,13}',
+        //     cardtype: 'instapayment'
+        // },
     ]
 })
 
