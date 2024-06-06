@@ -2,14 +2,15 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(circle at 50% 50%, #192233 20%, #000);
-    display: --webkit-box;
-    display: --ms-flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-line-pack: center;
         align-content: center;
     -webkit-box-align: center;
-        -ms-flex-alight: center;
-    -webkit-box-pack:center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     min-height: 100vh;
@@ -36,7 +37,7 @@ body {
     grid-area: expiration;
 }
 
-.field-container .field-container:nth-of-type(4) {
+.form-container .field-container:nth-of-type(4) {
     grid-area: security;
 }
 
@@ -63,7 +64,7 @@ body {
 label {
     padding-bottom: 5px;
     font-size: 13px;
-    color: rgb(180, 191, 195);
+    color: rgb(180 191 195);
 }
 
 input {
@@ -118,31 +119,31 @@ input {
     border-radius: 22px;
 }
 
-#generatecard {
+#generatecard{
     cursor: pointer;
     float: right;
     font-size: 12px;
     color: #fff;
     padding: 2px 4px;
-    background-color:  #909090;
+    background-color: #909090;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+    float:right;
 }
 
-/* CHANGEABLE CARD ELEMENTS */ 
-.creditcard .lightcolor, 
+/* CHANGEABLE CARD ELEMENTS */
+.creditcard .lightcolor,
 .creditcard .darkcolor {
     -webkit-transition: fill .5s;
     transition: fill .5s;
 }
 
 .creditcard .lightblue {
-    fill: #03a9f4;
+    fill: #03A9F4;
 }
 
 .creditcard .lightbluedark {
-    fill: #0288d1;
+    fill: #0288D1;
 }
 
 .creditcard .red {
@@ -166,7 +167,7 @@ input {
 }
 
 .creditcard .cyandark {
-    fill: #0094a7;
+    fill: #0097a7;
 }
 
 .creditcard .green {
@@ -175,6 +176,10 @@ input {
 
 .creditcard .greendark {
     fill: #388e3c;
+}
+
+.creditcard .lime {
+    fill: #d4e157;
 }
 
 .creditcard .limedark {
@@ -206,9 +211,8 @@ input {
 }
 
 /* FRONT OF CARD */
-
 #svgname {
-    text-decoration: uppercase;
+    text-transform: uppercase;
 }
 
 #cardfront .st2 {
@@ -227,6 +231,10 @@ input {
 #cardfront .st5 {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
+}
+
+#cardfront .st6 {
+    font-size: 33.1112px;
 }
 
 #cardfront .st7 {
@@ -255,11 +263,10 @@ input {
     fill: #4C4C4C;
 }
 
-/* BACK OF CARD */ 
-
+/* BACK OF CARD */
 #cardback .st0 {
     fill: none;
-    stroke: black;
+    stroke: #0F0F0F;
     stroke-miterlimit: 10;
 }
 
@@ -268,7 +275,7 @@ input {
 }
 
 #cardback .st3 {
-    fill: #f2f2f2;
+    fill: #F2F2F2;
 }
 
 #cardback .st4 {
@@ -276,7 +283,7 @@ input {
 }
 
 #cardback .st5 {
-    fill: #c4c4c4;
+    fill: #C4C4C4;
 }
 
 #cardback .st6 {
@@ -320,16 +327,17 @@ input {
 .creditcard {
     width: 100%;
     max-width: 400px;
-    -webkit-transform-style: preserve-3D;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    transition: transform 0.6s -webkit-transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
     cursor: pointer;
 }
 
-.creditcard .front, 
-.creditcard .back{
+.creditcard .front,
+.creditcard .back {
     position: absolute;
     width: 100%;
     max-width: 400px;
@@ -340,11 +348,11 @@ input {
 }
 
 .creditcard .back {
-    -webkit-transform: rotateY(100deg);
-    transform: rotateY(100deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .creditcard.flipped {
-    -webkit-transform: rotateY(100deg);
-    transform: rotateY(100deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
