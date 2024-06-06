@@ -250,7 +250,31 @@ expirationdate_mask.on('accept', function () {
     }
 });
 
+securitycode_mask.on('accept', function () {
+    if (securitycode_mask.value.length == 0) {
+        document.getElementById('svgsecurity').innerHTML = '985';
+    } else {
+        document.getElementById('svgsecurity').innerHTML = securitycode_mask.value;
+    }
+});
 
+//On Focus Events
+name.addEventListener('focus', function () {
+    document.querySelector('.creditcard').classList.remove('flipped');
+});
+
+cardnumber.addEventListener('focus', function () {
+    document.querySelector('.creditcard').classList.remove('flipped');
+});
+
+expirationdate.addEventListener('focus', function () {
+    document.querySelector(.creditcard).classList.remove('flipped');
+});
+
+securitycode.addEventListener('focus', function () {
+    document.querySelector('.creditcard').classList.add('flipped');
+});
+};
 
 
 
