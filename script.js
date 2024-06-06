@@ -129,12 +129,12 @@ let unionpay_single = `<svg xmlns="http://www.w3.org/2000/svg" width="750" heigh
 //define the color swap function 
 const swapColor = function (basecolor) {
     document.querySelectorAll(' .lightcolor')
-        .forEach(function (Input){
+        .forEach(function (Input) {
             input.setAttribute('class', '');
             input.setAttribute('class', 'lightcolor ' + basecolor);
         });
     document.querySelectorAll('.darkcolor')
-        .forEach(function (input){
+        .forEach(function (input) {
             input.setAttribute('class', '');
             input.setAttribute('class', 'darkcolor ' + basecolor + 'dark');
         });
